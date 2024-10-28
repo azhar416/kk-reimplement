@@ -17,6 +17,23 @@ from keras.models import Sequential
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras.optimizers import Adam, RMSprop
 
+'''
+The U-Net consists of a contraction path that acts as an encoder and an expansion path that acts as a decoder. 
+Each layer in the expansion path is concatenated with a layer from the contraction path to preserve localization information [6]. 
+
+In our modified U-Net structure, there are 5 blocks in the contraction path, 
+each consisting of two convolutional layers with a kernel size of 3x3 followed by 
+a batch normalization layer and rectified linear unit (ReLU) activation. 
+Then, a 2x2 max pooling layer is applied, followed by a dropout layer. 
+
+In the expansion path, there are 4 blocks, each consisting of a
+transposed convolutional layer with a kernel size of 3x3
+concatenated with a corresponding layer from the contraction path, 
+and a dropout layer followed by two sequential 3x3 convolutions, 
+which are then succeeded by a batch normalization layer and ReLU activation. 
+The final output layer in this U-Net is a convolutional layer with kernel size 1x1 activated
+by a sigmoid function that outputs single-channel grayscale images representing the predicted tumor masks.
+'''
 def Unet_Model(input_shape, init_filter, drop_rate, up_sampling=False, 
          regularization=False, batch_norm=False):
     # Set Up Regularization

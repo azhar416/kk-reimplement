@@ -1,0 +1,8 @@
+Test run at 2024-10-28 15:32:19
+
+Test run at 2024-10-28 15:32:44
+
+Validation accuracy: 0.9871794581413269
+Test accuracy: 0.9620253443717957
+Training time: 75.81923794746399
+Inference time: 13.967585563659668
