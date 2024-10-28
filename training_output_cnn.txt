@@ -4,3 +4,9 @@ Validation accuracy: 0.7948718070983887
 Test accuracy: 0.8227847814559937
 Training time: 84.68268895149231
 Inference time: 14.265043497085571
+Test run at 2024-10-28 14:51:10
+
+Validation accuracy: 0.7692307829856873
+Test accuracy: 0.8354430198669434
+Training time: 82.4416971206665
+Inference time: 20.657909631729126

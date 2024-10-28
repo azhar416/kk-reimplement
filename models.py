@@ -6,6 +6,7 @@ import tensorflow as tf
 from datetime import datetime
 import keras
 from keras import layers
+from keras.regularizers import l1, l2
 from keras.layers import Input, Dropout, Dense, Flatten, BatchNormalization, Activation, Conv2D, MaxPooling2D, UpSampling2D, Conv2DTranspose
 from keras.models import Model
 from keras.applications.resnet import ResNet50
